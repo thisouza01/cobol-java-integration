@@ -5,11 +5,10 @@ import org.json.JSONObject;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class ReaderJSON {
+public class CustomerJsonReader {
 
-    public static void ReaderJSON(){
+    public CustomerJsonReader(String filePath){
         try {
-            String filePath = "C:\\cobol-java-integration\\src\\customers.json";
             String jsonString = new String(Files.readAllBytes(Paths.get(filePath)));
 
             JSONObject jsonObject = new JSONObject(jsonString);
