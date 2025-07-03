@@ -1,5 +1,12 @@
 package main.java.com.service;
 
-public class JsonToFixedLengthConverter {
+import java.io.BufferedWriter;
 
+/*public class JsonToFixedLengthConverter() {
+    public void fixedLengthConverter(String filePath){
+        try (BufferedWriter writer = ){
+
+        }
+    }
 }
+*/
