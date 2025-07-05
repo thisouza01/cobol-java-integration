@@ -23,8 +23,6 @@ public class CustomerJsonReader {
                 JSONObject object = jsonArray.getJSONObject(i);
 
                 customerList.add(object.toString());
-
-                System.out.println("Customer: " + object.toString());
             }
 
             return customerList;

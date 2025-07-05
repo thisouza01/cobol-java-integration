@@ -9,20 +9,20 @@ import java.util.List;
 
 public class JsonToFixedLengthConverter {
 
-    public void fixedLengthConverter(List<Customer> customers, String filePath)throws IOException{
+    public void fixedLengthConverter(List<String> customers, String filePath)throws IOException{
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
-            for (Customer customer : customers){
+            for (String customer : customers){
                 String line = formatRecord(customer);
+                writer.write(line);
+                writer.newLine();
             }
         } catch (IOException e) {
             System.err.println("Error writing file: " + e.getMessage());
         }
     }
 
-    private static String formatRecord(Customer customer){
+    private static String formatRecord(String customer){
         return String.format("%-4s%-20s%010.2f",
-                customer.getId(),
-                customer.getName(),
-                customer.getBalance());
+
     }
 }
