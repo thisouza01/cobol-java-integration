@@ -9,7 +9,7 @@ import java.util.List;
 
 public class JsonToFixedLengthConverter {
 
-    public void fixedLengthConverter(List<Customer> customers, String filePath)throws IOException{
+    public void fixedLengthConverter(List<Customer> customers , String filePath)throws IOException{
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filePath))){
             for (Customer customer : customers){
                 String line = formatRecord(customer);
